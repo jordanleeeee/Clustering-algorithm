@@ -1,12 +1,12 @@
 import numpy
-
+import time
 import util
 import random
 import copy
 import matplotlib.pyplot as plt
 
 
-def getClusters(xCoord, yCoord, means, k, size):
+def getClusters(means, k):
     while True:
         tempMean = copy.deepcopy(means)
         cluster = list()
@@ -34,11 +34,11 @@ def getClusters(xCoord, yCoord, means, k, size):
             return cluster
 
 
-def kMeans(xCoord, yCoord, k, size):
+def getInitialMeans(k):
     randPt = random.randint(0, size - 1)
     meanPts = list()
     meanPts.append(randPt)
-    for i in range(k-1):
+    for i in range(k - 1):
         probability = list()
         for j in range(size):
             minD = float('inf')
@@ -55,15 +55,25 @@ def kMeans(xCoord, yCoord, k, size):
     means = list()
     for pt in meanPts:
         means.append([xCoord[pt], yCoord[pt]])
-    clusters = getClusters(xCoord, yCoord, means, k, size)
+    return means
+
+
+def kMeans(k):
+    means = getInitialMeans(k)
+    clusters = getClusters(means, k)
+    SSE = calSSE(k, clusters, means)
+    print("when k = " + str(k) + " sum of squared error = " + str(SSE))
+    return clusters
+
+
+def calSSE(k, clusters, means):
     SSE = 0
     for i in range(k):
         cluster = clusters[i]
         mean = means[i]
         for pt in cluster:
             SSE += util.euclideanDistanceSquare(xCoord[pt], yCoord[pt], mean[0], mean[1])
-    print("when k = " + str(k) + " sum of squared error = " + str(SSE))
-    return clusters
+    return SSE
 
 
 def plotCluster(clusters, k):
@@ -84,5 +94,7 @@ def plotCluster(clusters, k):
 
 xCoord, yCoord, size = util.readDataPoint("a3dataset.txt")
 for k in [3, 6, 9]:
-    clusters = kMeans(xCoord, yCoord, k, size)
+    start = time.time()
+    clusters = kMeans(k)
+    print("time taken = " + str(time.time()-start) + "s")
     plotCluster(clusters, k)

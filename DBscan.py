@@ -1,4 +1,5 @@
 import util
+import time
 import matplotlib.pyplot as plt
 
 
@@ -26,7 +27,7 @@ def DBscan(corePts, neighborhood):
     clusters = list()
     unProcessedPts = set(corePts)
     while len(unProcessedPts) != 0:
-        print(unProcessedPts)
+        # print(unProcessedPts)
         pt = unProcessedPts.pop()
         densityReachablePt = getDensityReachablePt(pt, neighborhood)
         clusters.append(densityReachablePt)
@@ -35,9 +36,10 @@ def DBscan(corePts, neighborhood):
     return clusters
 
 
-def classifyPts(xCoord, yCoord, size, eps, minPts):
+# find all core pt and noise pt
+# also find neighborhood of each pt
+def classifyPts(eps, minPts):
     corePts = set()
-    borderPts = set()
     noisePts = set()
     neighborhood = dict()
     for i in range(size):
@@ -47,25 +49,23 @@ def classifyPts(xCoord, yCoord, size, eps, minPts):
             if distant <= eps:
                 temp.append(j)
         neighborhood[i] = temp
+
     for pt, neighbors in neighborhood.items():
         if len(neighbors) >= minPts:
             corePts.add(pt)
     for pt, neighbors in neighborhood.items():
         if pt not in corePts:
+            isBorderPt = False
             for neighbor in neighbors:
                 if neighbor in corePts:
-                    borderPts.add(pt)
+                    isBorderPt = True
                     break
-    for pt in neighborhood.keys():
-        if pt not in corePts:
-            if pt not in borderPts:
+            if not isBorderPt:
                 noisePts.add(pt)
     return corePts, noisePts, neighborhood
 
 
 def plotCluster(clusters, noisePts, eps, minPts):
-    color = ['green', 'cyan', 'black', 'pink', 'yellow', 'blue', 'orange', 'red']
-    i = 0
     for cluster in clusters:
         x = list()
         y = list()
@@ -73,25 +73,25 @@ def plotCluster(clusters, noisePts, eps, minPts):
             x.append(xCoord[point])
             y.append(yCoord[point])
         plt.scatter(x, y, s=1)
-        i += 1
     x = list()
     y = list()
     for point in noisePts:
         x.append(xCoord[point])
         y.append(yCoord[point])
-        plt.scatter(x, y, s=2, color="black")
+    plt.scatter(x, y, s=2, color="black")
 
     plt.title("eps= "+str(eps)+" minPts= "+str(minPts)+" DBScan")
     plt.xlabel('x')
     plt.ylabel('y')
     plt.savefig("eps= "+str(eps)+" minPts= "+str(minPts)+" DBScan.png")
-    plt.show()
+    # plt.show()
 
 
 xCoord, yCoord, size = util.readDataPoint("a3dataset.txt")
 
-# for eps, minPts in [[5, 10], [5, 4], [1, 4]]:
-for eps, minPts in [[5, 4]]:
-    corePts, noisePts, neighborhood = classifyPts(xCoord, yCoord, size, eps, minPts)
+for eps, minPts in [[5, 5], [5, 6], [5, 7]]:
+    start = time.time()
+    corePts, noisePts, neighborhood = classifyPts(eps, minPts)
     clusters = DBscan(corePts, neighborhood)
+    print("time taken = " + str(time.time() - start) + "s")
     plotCluster(clusters, noisePts, eps, minPts)

@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d24ce95c-0ae3-4024-9793-feefa561cc79" name="Default Changelist" comment="" />
+    <list default="true" id="d24ce95c-0ae3-4024-9793-feefa561cc79" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBscan.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBscan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/junk.py" beforeDir="false" afterPath="$PROJECT_DIR$/junk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kMeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/kMeans.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1aqvGb2FhtgTLI5XxIDOvifTYj7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -17,7 +26,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="RunManager" selected="Python.DBscan">
+  <component name="RunManager" selected="Python.junk (1)">
     <configuration name="DBscan" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="assignment3" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,9 +134,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.junk (1)" />
         <item itemvalue="Python.DBscan" />
         <item itemvalue="Python.kMeans (1)" />
-        <item itemvalue="Python.junk (1)" />
         <item itemvalue="Python.rubbish" />
         <item itemvalue="Python.kMeans" />
       </list>
@@ -155,25 +164,25 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="446" y="186" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1587480116074" />
-    <state width="1321" height="2" key="GridCell.Tab.0.bottom" timestamp="1587634760254">
+    <state width="1343" height="179" key="GridCell.Tab.0.bottom" timestamp="1587783916957">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1321" height="2" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1587634760254" />
-    <state width="1321" height="2" key="GridCell.Tab.0.center" timestamp="1587634760254">
+    <state width="1343" height="179" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1587783916957" />
+    <state width="1343" height="179" key="GridCell.Tab.0.center" timestamp="1587783916957">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1321" height="2" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1587634760254" />
-    <state width="1321" height="2" key="GridCell.Tab.0.left" timestamp="1587634760254">
+    <state width="1343" height="179" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1587783916957" />
+    <state width="1343" height="179" key="GridCell.Tab.0.left" timestamp="1587783916956">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1321" height="2" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1587634760254" />
-    <state width="1321" height="2" key="GridCell.Tab.0.right" timestamp="1587634760254">
+    <state width="1343" height="179" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1587783916956" />
+    <state width="1343" height="179" key="GridCell.Tab.0.right" timestamp="1587783916957">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1321" height="2" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1587634760254" />
-    <state x="378" y="206" key="com.intellij.ide.util.TipDialog" timestamp="1587612477258">
+    <state width="1343" height="179" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1587783916957" />
+    <state x="378" y="206" key="com.intellij.ide.util.TipDialog" timestamp="1587781785001">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="378" y="206" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1587612477258" />
+    <state x="378" y="206" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1587781785001" />
   </component>
 </project>
