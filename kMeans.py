@@ -89,7 +89,7 @@ def plotCluster(clusters, k):
     plt.xlabel('x')
     plt.ylabel('y')
     plt.savefig(str(k) + ' means clusters.png')
-    # plt.show()
+    plt.show()
 
 
 xCoord, yCoord, size = util.readDataPoint("a3dataset.txt")

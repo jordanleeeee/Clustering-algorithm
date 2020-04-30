@@ -7,15 +7,15 @@ def decomposeLine(line):
     return line.split(",")
 
 
-def readDataPoint2(path):
-    points = list()
-    database = open(path, 'r')
-    line = database.readline()
-    while line != "":
-        record = decomposeLine(line)
-        points.append(record)
-        line = database.readline()
-    return points
+# def readDataPoint2(path):
+#     points = list()
+#     database = open(path, 'r')
+#     line = database.readline()
+#     while line != "":
+#         record = decomposeLine(line)
+#         points.append(record)
+#         line = database.readline()
+#     return points
 
 
 def readDataPoint(path):

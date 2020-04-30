@@ -32,7 +32,6 @@ def DBscan(corePts, neighborhood):
         densityReachablePt = getDensityReachablePt(pt, neighborhood)
         clusters.append(densityReachablePt)
         unProcessedPts -= set(densityReachablePt)
-    print(clusters)
     return clusters
 
 
@@ -84,12 +83,12 @@ def plotCluster(clusters, noisePts, eps, minPts):
     plt.xlabel('x')
     plt.ylabel('y')
     plt.savefig("eps= "+str(eps)+" minPts= "+str(minPts)+" DBScan.png")
-    # plt.show()
+    plt.show()
 
 
 xCoord, yCoord, size = util.readDataPoint("a3dataset.txt")
 
-for eps, minPts in [[5, 5], [5, 6], [5, 7]]:
+for eps, minPts in [[5, 10], [5, 4], [1, 4]]:
     start = time.time()
     corePts, noisePts, neighborhood = classifyPts(eps, minPts)
     clusters = DBscan(corePts, neighborhood)
