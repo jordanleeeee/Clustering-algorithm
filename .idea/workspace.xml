@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d24ce95c-0ae3-4024-9793-feefa561cc79" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBscan.py" beforeDir="false" afterPath="$PROJECT_DIR$/DBscan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/junk.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kMeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/kMeans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rubbish.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/util.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,9 +179,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1343" height="209" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1588231159031" />
-    <state x="378" y="206" key="com.intellij.ide.util.TipDialog" timestamp="1587815001083">
+    <state x="378" y="206" key="com.intellij.ide.util.TipDialog" timestamp="1588327315704">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="378" y="206" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1587815001083" />
+    <state x="378" y="206" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1588327315704" />
   </component>
 </project>
